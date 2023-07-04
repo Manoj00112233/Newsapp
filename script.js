@@ -10,6 +10,7 @@ function reload() {
 async function fetchNews(query) {
     const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
     const data = await res.json();
+    console.log(data); // Check the data in the browser's console
     bindData(data.articles);
 }
 
